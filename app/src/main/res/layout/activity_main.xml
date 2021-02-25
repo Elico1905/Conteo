@@ -4,51 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        android:gravity="center_horizontal|center_vertical">
 
         <TextView
             android:id="@+id/caja"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="0"
-            android:textAlignment="center"
-            android:textSize="80dp" />
-
-        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:text="0\ndias"
+            android:textAlignment="center"
+            android:textSize="100dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/boton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/redondear"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/button_trash"
+            android:foreground="@drawable/effect_ripple"
+            android:clickable="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|end">
+        <ImageView
+            android:id="@+id/boton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_gravity="center"
-            android:layout_marginTop="400dp">
-
-            <com.skydoves.elasticviews.ElasticImageView
-                android:id="@+id/boton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="#00000000"
-                android:src="@drawable/button_add" />
-            <com.skydoves.elasticviews.ElasticImageView
-                android:id="@+id/boton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/button_trash"
-                android:layout_marginLeft="100dp"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-
-
+            android:background="@drawable/redondear"
+            android:src="@drawable/button_add"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:foreground="@drawable/effect_ripple"
+            android:clickable="true"/>
+    </RelativeLayout>
 
 
 

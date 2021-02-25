@@ -6,13 +6,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.skydoves.elasticviews.ElasticImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ElasticImageView boton,boton2;
+    ImageView boton,boton2;
     TextView caja;
     int c=0;
 
@@ -22,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        boton=(ElasticImageView)findViewById(R.id.boton);
-        boton2=(ElasticImageView)findViewById(R.id.boton2);
+        boton=(ImageView)findViewById(R.id.boton);
+        boton2=(ImageView)findViewById(R.id.boton2);
         caja=(TextView)findViewById(R.id.caja);
         leer();
-        caja.setText(c+"");
+        caja.setText(c+"\ndias");
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 c++;
-                caja.setText(c+"");
+                caja.setText(c+"\ndias");
                 escribir();
             }
         });
@@ -63,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
         editor.clear();
         editor.commit();
         c = 0;
-        caja.setText("0");
+        caja.setText("0\ndias");
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
     }
 }
