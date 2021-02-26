@@ -6,6 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_superior"
+            android:scaleType="fitStart"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_inferior"
+            android:scaleType="fitEnd"/>
+
+    </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -16,7 +39,7 @@
             android:id="@+id/caja"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="38dp"
             android:text="0\ndias"
             android:textAlignment="center"
             android:textSize="100dp"/>
@@ -30,7 +53,6 @@
             android:id="@+id/boton2"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/redondear"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:src="@drawable/button_trash"
@@ -47,7 +69,6 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_gravity="center"
-            android:background="@drawable/redondear"
             android:src="@drawable/button_add"
             android:layout_marginBottom="10dp"
             android:layout_marginRight="10dp"
@@ -56,6 +77,86 @@
     </RelativeLayout>
 
 
+<RelativeLayout
+    android:id="@+id/fondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BC232323"
+    android:clickable="true"
+    android:visibility="invisible">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:visibility="invisible"
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="#FFFFFF">
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/signo"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Seguro que deseas salir?"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="20dp"/>
+
+                <Button
+                    android:id="@+id/salir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00796B"
+                    android:text="salir"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginBottom="30dp"
+                    android:foreground="@drawable/effect_ripple_2"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/cancelar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/equis"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
